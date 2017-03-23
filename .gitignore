@@ -1,6 +1,7 @@
 .idea
-archive\.idea
+/archive/.idea
 .sass-cache
-assets\.sass-cache
-assets\css\style.css.map
-assets\css\style.css
+/assets/.sass-cache
+/assets/css/style.css.map
+/assets/css/style.css
+/assets/**/*.map
