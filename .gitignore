@@ -5,3 +5,18 @@
 /assets/css/style.css.map
 /assets/css/style.css
 /assets/**/*.map
+
+# A line starting with a hash indicates a comment
+
+# A blank line matches no files/folders and can serve as a separator
+
+# A ! negates the pattern. For example, if you have exluded /assets/* but want to include the sass folder, you do:
+# /assets/*
+# !/aseets/sass
+
+# If the pattern does not contain a leading /, git will search for the pattern relative to the location of the
+# .gitignore file.
+
+# A /**/ means "any folder or sub-folder" while /*/ means "any folder."
+# So, /assets/**/*.map will match any file with the .map extension in any folder or their sub-folders inside assets
+# /assets/*/*.map will match any .map file in any directory inside assets, but not if it's in a sub-folder
