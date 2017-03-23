@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,+CAA+C;ACA/C,mDAAmD;ACAnD,oDAAoD;ACApD,qDAAqD;ACArD,qDAAqD;ACArD,mDAAmD",
-"sources": ["../sass/base/_variables.scss","../sass/base/_global.scss","../sass/layout/_search.scss","../sass/layout/_results.scss","../sass/layout/_payment.scss","../sass/layout/_mobile.scss"],
-"names": [],
-"file": "style.css"
-}
