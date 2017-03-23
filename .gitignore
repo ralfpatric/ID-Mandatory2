@@ -1,5 +1,6 @@
 .idea
 archive\.idea
+.sass-cache
 assets\.sass-cache
 assets\css\style.css.map
 assets\css\style.css
