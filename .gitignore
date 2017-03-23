@@ -12,7 +12,7 @@
 
 # A ! negates the pattern. For example, if you have exluded /assets/* but want to include the sass folder, you do:
 # /assets/*
-# !/aseets/sass
+# !/assets/sass
 
 # If the pattern does not contain a leading /, git will search for the pattern relative to the location of the
 # .gitignore file.
