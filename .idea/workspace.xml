@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5377c495-a736-4556-b46a-27fe44284822" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/layout/_mobile.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/layout/_payment.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/layout/_results.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/layout/_search.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mandatory2.iws" />
@@ -47,8 +37,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -336,12 +326,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490095983257</updated>
-      <workItem from="1490249836680" duration="1626000" />
+      <workItem from="1490249836680" duration="1859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1626000" />
+    <option name="totallyTimeSpent" value="1859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
@@ -456,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
