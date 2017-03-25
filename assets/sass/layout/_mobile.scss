@@ -1,1 +1,57 @@
 /* --------------- MEDIA QUERIES --------------- */
+
+@media screen and (max-width: 376px) {
+  /* --- GENERAL --- */
+
+  /* --- SEARCH --- */
+
+  #search {
+    .sectionwrapper {
+      width: 90%;
+      border: none;
+
+      form {
+        width: 100%;
+      }
+    }
+  }
+  /* --- RESULTS --- */
+
+  /* --- PAYMENT --- */
+}
+@media screen and (max-width: 628px) {
+  /* --- GENERAL --- */
+
+  /* --- SEARCH --- */
+
+  /* --- RESULTS --- */
+
+  /* --- PAYMENT --- */
+}
+@media screen and (max-width: 769px) {
+  /* --- GENERAL --- */
+
+  /* --- SEARCH --- */
+
+  /* --- RESULTS --- */
+
+  /* --- PAYMENT --- */
+}
+@media screen and (max-width:825px) {
+  /* --- GENERAL --- */
+
+  /* --- SEARCH --- */
+
+  /* --- RESULTS --- */
+
+  /* --- PAYMENT --- */
+}
+@media screen and (max-width: 1025px) {
+  /* --- GENERAL --- */
+
+  /* --- SEARCH --- */
+
+  /* --- RESULTS --- */
+
+  /* --- PAYMENT --- */
+}

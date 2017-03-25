@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Stilart M</title>
+    <title>Interface Design - Mandatory 2</title>
     <link rel="icon" href="favicon.ico" type="image/jpg" sizes="16x16">
-    <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
 </head>
 
@@ -30,18 +28,23 @@
 </aside>-->
 
 <section id="search">
-    <h2>Hello World!</h2>
     <div class="sectionwrapper">
         <!--CONTENT HERE-->
         <form>
-            Destination
+            <label>Destination</label>
             <input type="text" name="destination">
-            Origin
+            <label>Origin</label>
             <input type="text" name="origin">
-            Departure
-            <input type="date" name="departure">
-            Return
-            <input type="date" name="return">
+            <div id="date-picker">
+                <div id="departure">
+                    <label>Departure</label>
+                    <input type="date" name="departure">
+                </div>
+                <div id="return">
+                    <label>Return</label>
+                    <input type="date" name="return">
+                </div>
+            </div>
             <input type="submit" name="submit">
         </form>
 
@@ -49,12 +52,12 @@
 </section>
 
 <main>
-    <section id="search">
+    <!--<section id="search">
         <h2>Search</h2>
         <div class="sectionwrapper">
-        <!--CONTENT HERE-->
+        &lt;!&ndash;CONTENT HERE&ndash;&gt;
         </div>
-    </section>
+    </section>-->
 
     <section id="results">
         <h2>Results</h2>

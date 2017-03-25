@@ -1,1 +1,18 @@
 /* --------------- GLOBAL SET-UP --------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $headlineFont;
+}
+
+p,input,footer,button,label {
+  font-family: $bodyFont;
+}
+
+footer {
+  text-align: center;
+}
