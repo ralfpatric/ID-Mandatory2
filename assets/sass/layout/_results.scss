@@ -3,13 +3,19 @@
 #results {
   margin-left: 20vw;
   display: none;
+  .active {
+    background-color: rgba(black, 0.1);
+  }
+  .fa-arrow-down {
+    cursor: pointer;
+  }
   .sectionwrapper {
     width: 90%;
     margin: 0 auto;
     text-align: center;
     .result-item {
       border: 2px solid white;
-      margin-bottom: 2em;
+      margin-bottom: 4em;
       .r-i-top {
         border-bottom: 2px solid white;
         min-height: 5em;

@@ -8,7 +8,6 @@ jQuery("document").ready(function(){
     //If page is loaded while not at the top
     var iSearchH = $("#search").outerHeight(true);
     var iToTop = $(document).scrollTop();
-
     if(iToTop >= iSearchH){
         $("aside").css("top", 0)
     } else {
@@ -47,16 +46,28 @@ jQuery("document").ready(function(){
         }, 750);
     });
 
+    $(".result-item").click(function(){
+        $(".result-item").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".fa-arrow-down").click(function(){
+        console.log("Customize me! (Later)");
+    });
+
     //FUNCTIONALITY
     function setAsideMargin(){
         var iSearchHeight = $("#search").outerHeight(true);
         var iCurrentHeight = $(document).scrollTop();
         var iDetermine = iSearchHeight - iCurrentHeight;
+        var iBodyWidth = $("body").outerWidth(true);
 
-        if(iDetermine < 0){
-            $("aside").css("top", 0)
-        } else {
-            $("aside").css("top", iDetermine)
+        if(iBodyWidth > 425) {
+            if (iDetermine < 0) {
+                $("aside").css("top", 0)
+            } else {
+                $("aside").css("top", iDetermine)
+            }
         }
     }
 });

@@ -1,6 +1,6 @@
 /* --------------- MEDIA QUERIES --------------- */
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 426px) {
   /* --- GENERAL --- */
 
   /* --- SEARCH --- */
@@ -17,41 +17,39 @@
   }
   /* --- RESULTS --- */
 
+  #results {
+    font-size: 40% !important;
+  }
+
+  #results, .payment-button, footer {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
   /* --- PAYMENT --- */
+
+  /* --- ASIDE --- */
+
+  aside {
+    display: none;
+  }
 }
-@media screen and (max-width: 628px) {
+@media screen and (max-width: 1023px) {
   /* --- GENERAL --- */
 
   /* --- SEARCH --- */
 
   /* --- RESULTS --- */
 
-  /* --- PAYMENT --- */
-}
-@media screen and (max-width: 769px) {
-  /* --- GENERAL --- */
-
-  /* --- SEARCH --- */
-
-  /* --- RESULTS --- */
+  #results {
+    font-size: 75%;
+  }
 
   /* --- PAYMENT --- */
-}
-@media screen and (max-width:825px) {
-  /* --- GENERAL --- */
 
-  /* --- SEARCH --- */
+  /* --- ASIDE --- */
 
-  /* --- RESULTS --- */
-
-  /* --- PAYMENT --- */
-}
-@media screen and (max-width: 1025px) {
-  /* --- GENERAL --- */
-
-  /* --- SEARCH --- */
-
-  /* --- RESULTS --- */
-
-  /* --- PAYMENT --- */
+  aside {
+    font-size: 60%;
+  }
 }
