@@ -5,6 +5,8 @@ jQuery("document").ready(function(){
 
     console.log("Page loaded and ready.");
 
+
+    // EVENTS
     $(".payment-button button").click(function(){
         $("#payment").css("display", "flex");
     });
@@ -14,4 +16,21 @@ jQuery("document").ready(function(){
             $("#payment").css("display", "none");
         }
     });
+
+    $(document).scroll(function(){
+        setAsideMargin();
+    });
+
+    //FUNCTIONALITY
+    function setAsideMargin(){
+        var iSearchHeight = $("#search").outerHeight(true);
+        var iCurrentHeight = $(document).scrollTop();
+        var iDetermine = iSearchHeight - iCurrentHeight;
+
+        if(iDetermine < 0){
+            $("aside").css("top", 0)
+        } else {
+            $("aside").css("top", iDetermine)
+        }
+    }
 });
