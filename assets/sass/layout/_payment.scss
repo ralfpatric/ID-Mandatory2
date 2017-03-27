@@ -18,6 +18,13 @@
   left: 0%;
   background-color: rgba(black, 0.5);
 
+  .fa {
+    position: absolute;
+    top: 0;
+    right: 0.5%;
+    cursor: pointer;
+  }
+
   .sectionwrapper {
     display: flex;
     flex-direction: column;
