@@ -15,4 +15,20 @@ p,input,footer,button,label {
 
 footer {
   text-align: center;
+  margin-left:20vw;
 }
+
+main {
+  position: relative;
+  margin-left: 20vw;
+}
+
+aside {
+  height:100vh;
+  width:20vw;
+  background-color: indianred;
+  position: fixed;
+  top:0;
+  left:0;
+}
+

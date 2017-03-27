@@ -23,55 +23,120 @@
     </nav>
 </header>-->
 
-<!--<aside>
-    &lt;!&ndash;CONTENT HERE&ndash;&gt;
-</aside>-->
-
-<section id="search">
-    <div class="sectionwrapper">
-        <!--CONTENT HERE-->
-        <form>
-            <label>Destination</label>
-            <input type="text" name="destination">
-            <label>Origin</label>
-            <input type="text" name="origin">
-            <div id="date-picker">
-                <div id="departure">
-                    <label>Departure</label>
-                    <input type="date" name="departure">
-                </div>
-                <div id="return">
-                    <label>Return</label>
-                    <input type="date" name="return">
-                </div>
-            </div>
-            <input type="submit" name="submit">
-        </form>
-
-    </div>
-</section>
-
 <main>
-    <!--<section id="search">
-        <h2>Search</h2>
+    <section id="search">
         <div class="sectionwrapper">
-        &lt;!&ndash;CONTENT HERE&ndash;&gt;
+            <!--CONTENT HERE-->
+            <form>
+                <label>Destination</label>
+                <input type="text" name="destination">
+                <label>Origin</label>
+                <input type="text" name="origin">
+                <div id="date-picker">
+                    <div id="departure">
+                        <label>Departure</label>
+                        <input type="date" name="departure">
+                    </div>
+                    <div id="return">
+                        <label>Return</label>
+                        <input type="date" name="return">
+                    </div>
+                </div>
+                <input type="submit" name="submit">
+            </form>
+
         </div>
-    </section>-->
+    </section>
+
+    <!--Unsure if we are allowed to use Javascript at all. If we aren't, there's no real way to make a position fixed
+     element stick within an element, as far as I know. Right now, that means that the information box on the left
+     has to be global. Or that the information won't follow up and down as you scroll. Either scenario isn't optimal,
+      both are easy to implement. If we ARE allowed to use JS, it's just a question of setting position: absolute and
+       using JS to adjust it's top property as the user scrolls, and so on.-->
+    <aside>
+        <!--CONTENT HERE-->
+        <h2>Information</h2>
+    </aside>
 
     <section id="results">
-        <h2>Results</h2>
         <div class="sectionwrapper">
+            <h2>Results</h2>
+            <div class="result-item">
+                <div class="ri-top">
+                    <div class="ri-left">
+                        <div class="ri-l-left">
+                            <h3>CITY1</h3>
+                            <p>City Name</p>
+                        </div>
+                        <div class="ri-l-right">
+                            <h3>11:30</h3>
+                        </div>
+                    </div>
+                    <div class="ri-middle">
+                        <div class="ri-m-left">
+                            <p>Duration</p>
+                            <div class="ri-divider"></div>
+                            <p>X Stops</p>
+                        </div>
+                        <div class="ri-m-right">
+                            <div class="ri-m-left">
+                                <h3>CITY2</h3>
+                                <p>City Name</p>
+                            </div>
+                            <div class="ri-m-right">
+                                <h3>19:45</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ri-right">
+                        <h3>8888 DKK</h3>
+                        <p>Customize<span>Arrow</span></p>
+                    </div>
+                </div>
+                <div class="ri-bottom">
+                    <div class="ri-left">
+                        <div class="ri-l-left">
+                            <h3>CITY2</h3>
+                            <p>City Name</p>
+                        </div>
+                        <div class="ri-l-right">
+                            <h3>08:45</h3>
+                        </div>
+                    </div>
+                    <div class="ri-middle">
+                        <div class="ri-m-left">
+                            <p>Duration</p>
+                            <div class="ri-divider"></div>
+                            <p>X Stops</p>
+                        </div>
+                        <div class="ri-m-right">
+                            <div class="ri-m-left">
+                                <h3>CITY1</h3>
+                                <p>City Name</p>
+                            </div>
+                            <div class="ri-m-right">
+                                <h3>15:30</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ri-right">
+                        <h3>8888 DKK</h3>
+                        <p>Customize<span>Arrow</span></p>
+                    </div>
+                </div>
+            </div>
         <!--CONTENT HERE-->
         </div>
     </section>
 
+    <!--This should be a "modal," right? Just checking to be sure-->
     <section id="payment">
-        <h2>Payment</h2>
         <div class="sectionwrapper">
+            <h2>Payment</h2>
         <!--CONTENT HERE-->
         </div>
     </section>
+
 </main>
 
 <footer>&copy; Designed and Developed by Ralf & John</footer>
