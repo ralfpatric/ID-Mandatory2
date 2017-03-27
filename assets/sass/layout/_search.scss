@@ -1,15 +1,54 @@
 /* --------------- SEARCH SECTION --------------- */
 
+#search-wrap {
+
+}
+
 #search {
+
   height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  min-height: 30vh;
+  max-height: 100vh;
+  background-color: #dce7f2;
+  border: 1px solid #2a4f73;
 
   .sectionwrapper {
+
     width: 90%;
     height: 60%;
     margin: 0 auto;
-    //padding: 20%;
     border: 2px solid white;
     text-align: center;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    min-height: 300px;
+    max-height: 450px;
+    background-color: #dce7f2;
+
+
+
+
+
 
     form {
       display: flex;
@@ -17,9 +56,22 @@
       width: 40%;
       margin: 0 auto;
 
+      label {
+        margin-top: $gutter-top;
+        margin-bottom: $gutter-bottom/2;
+
+      }
+
+      input[type=text] {
+        margin-bottom: $gutter-bottom;
+        text-align: center;
+      }
+
       #date-picker {
         display: flex;
         flex-direction: row;
+        margin-top: $gutter-top;
+        margin-bottom: $gutter-bottom;
 
         div {
           width: 50%;
@@ -28,6 +80,7 @@
 
           label {
             align-self: center;
+            margin-top: 0;
           }
 
           input[type=date] {
@@ -53,7 +106,8 @@
       }
 
       input[type=submit] {
-        margin: 0 auto;
+        //margin-top: $gutter-top;
+        margin: $gutter-top auto 0 auto;
       }
     }
   }

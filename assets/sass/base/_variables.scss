@@ -14,6 +14,14 @@ $primaryColor : #a2d92b;
 $secondaryColor : #6be5f2;
 $tertiaryColor : #f22987;
 
+/* ----- GUTTERS ----- */
+
+$gutter-top: 1.5vh;
+$gutter-bottom: 1.5vh;
+$input-height: 3vh;
+
+
+
 body {
   background-color: $primaryColor;
 }

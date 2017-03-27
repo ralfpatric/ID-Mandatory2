@@ -13,6 +13,15 @@ p,input,footer,button,label {
   font-family: $bodyFont;
 }
 
+label {
+  font-size: 1.25em;
+}
+
+input {
+  height: 3vh;
+  font-size: 1.25em;
+}
+
 footer {
   text-align: center;
   margin-left:20vw;
