@@ -9,11 +9,9 @@ jQuery("document").ready(function(){
         $("#payment").css("display", "flex");
     });
 
-    $("#payment .fa").click(function(){
-        $("#payment").css("display", "none");
-    });
-
-    $("#payment").click(function(){
-        $("#payment").css("display", "none");
+    $(document).click(function(event) {
+        if($(event.target).closest('#payment').length && !$(event.target).closest('.sectionwrapper').length){
+            $("#payment").css("display", "none");
+        }
     });
 });
