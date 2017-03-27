@@ -1,12 +1,19 @@
 /* Created by Johannes & Ralf. */
 
-console.log("Stuff.");
-
 jQuery("document").ready(function(){
     var $ = jQuery.noConflict();
 
+    console.log("Page loaded and ready.");
+
     $(".payment-button button").click(function(){
-        console.log("wot");
         $("#payment").css("display", "flex");
+    });
+
+    $("#payment .fa").click(function(){
+        $("#payment").css("display", "none");
+    });
+
+    $("#payment").click(function(){
+        $("#payment").css("display", "none");
     });
 });
