@@ -32,6 +32,7 @@
     height: 60%;
     margin: 0 auto;
     border: 2px solid white;
+    background-color: rgba(white,0.3);
     text-align: center;
     display: -webkit-flex;
     display: flex;
@@ -46,11 +47,6 @@
     flex-direction: row;
     min-height: 300px;
     max-height: 450px;
-    background-color: transparent;
-
-
-
-
 
 
     form {
