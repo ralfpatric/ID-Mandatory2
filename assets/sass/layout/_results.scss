@@ -8,8 +8,29 @@
     .result-item {
       border: 2px solid white;
       margin-bottom: 2em;
-      .r-i-top {
+      .r-i-top, .r-i-bottom {
         border-bottom: 2px solid white;
+        .ri-left {
+          display: inline-block;
+          .ri-l-left {
+            display: inline-block;
+          }
+          .ri-l-right {
+            display: inline-block;
+          }
+        }
+        .ri-middle {
+          display: inline-block;
+          .ri-m-left {
+            display: inline-block;
+          }
+          .ri-m-right {
+            display: inline-block;
+          }
+        }
+        .ri-right {
+          display: inline-block;
+        }
       }
     }
   }

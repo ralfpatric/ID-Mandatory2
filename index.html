@@ -257,11 +257,52 @@
         </div>
     </section>
 
+    <div class="payment-button">
+        <button>Go To Payment</button>
+    </div>
+
     <!--This should be a "modal," right? Just checking to be sure-->
     <section id="payment">
         <div class="sectionwrapper">
             <h2>Payment</h2>
         <!--CONTENT HERE-->
+            <form>
+                <label>Card Number</label>
+                <input type="text" name="cardnumber">
+                <label>Name on Card</label>
+                <input type="text" name="nameoncard">
+                <label>CVV Number</label>
+                <input type="text" name="cvv">
+                <div class="expiry-date">
+                    <div class="expiry-month">
+                        <select>
+                            <option selected="selected">Month</option>
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>Etc.</option>
+                        </select>
+                    </div>
+                    <div class="expiry-year">
+                        <select>
+                            <option selected="selected">Year</option>
+                            <option>1985</option>
+                            <option>1986</option>
+                            <option>1987</option>
+                            <option>1988</option>
+                            <option>1989</option>
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1992</option>
+                            <option>1993</option>
+                            <option>1994</option>
+                            <option>1995</option>
+                            <option>Etc.</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" name="submit" value="Pay Now">
+            </form>
         </div>
     </section>
 
