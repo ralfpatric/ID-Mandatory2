@@ -22,6 +22,10 @@ jQuery("document").ready(function(){
         $("#payment").css("display", "flex");
     });
 
+    $(".payment").click(function(){
+        $("#payment").css("display", "flex");
+    });
+
     $(document).click(function(event) {
         if($(event.target).closest('#payment').length && !$(event.target).closest('.sectionwrapper').length){
             $("#payment").css("display", "none");
