@@ -23,20 +23,12 @@ input {
 }
 
 footer {
+  display: none;
   text-align: center;
   margin-left:20vw;
 }
 
 main {
   position: relative;
-}
-
-aside {
-  height:100vh;
-  width:20vw;
-  background-color: indianred;
-  position: fixed;
-  top:100%;
-  left:0;
 }
 

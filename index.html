@@ -57,7 +57,28 @@
        using JS to adjust it's top property as the user scrolls, and so on.-->
     <aside>
         <!--CONTENT HERE-->
-        <h2>Information</h2>
+        <div class="header">
+            <h2 class="title">So Much Travel</h2>
+            <h2 class="total-price">Total Price: <span class="price">-</span></h2>
+        </div>
+        <div class="destinations">
+            <div class="top">
+                <i class="fa fa-calendar-o fa-2x" aria-hidden="true"></i>
+                <h3>CITY1 - CITY2</h3>
+            </div>
+            <div class="bottom">
+                <i class="fa fa-calendar-o fa-2x" aria-hidden="true"></i>
+                <h3>CITY1 - CITY2</h3>
+            </div>
+        </div>
+        <div class="passengers">
+            <i class="fa fa-user fa-lg fa-2x" aria-hidden="true"></i>
+            <h3>Passengers</h3>
+        </div>
+        <div class="payment">
+            <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+            <h3>PAYMENT</h3>
+        </div>
     </aside>
 
     <section id="results">
@@ -452,7 +473,7 @@
     </section>
 
     <div class="payment-button">
-        <button>Go To Payment</button>
+        <button>Continue</button>
     </div>
 
     <!--This should be a "modal," right? Just checking to be sure-->

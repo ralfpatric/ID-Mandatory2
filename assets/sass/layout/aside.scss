@@ -1,0 +1,85 @@
+/* --------------- ASIDE --------------- */
+
+aside {
+  display: none;
+  height:100vh;
+  width:20vw;
+  background-color: indianred;
+  position: fixed;
+  top:100%;
+  left:0;
+  border-right: 2px solid white;
+  .header {
+    padding-top: 1em;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      align-self: center;
+      margin: 0;
+      margin-bottom: 0.5em;
+      padding: 0;
+    }
+  }
+  .destinations {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px solid white;
+    .top, .bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 2em;
+      i {
+        margin-right: 0.5em;
+        align-self: flex-start;
+      }
+      h3 {
+        margin: 0;
+        padding: 0;
+        align-self: center;
+      }
+    }
+  }
+  .passengers {
+    margin-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    i {
+      margin-right: 0.5em;
+      align-self: flex-start;
+    }
+    h3 {
+      margin: 0;
+      padding: 0;
+      align-self: center;
+    }
+  }
+  .payment {
+    margin-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    i {
+      margin-right: 0.5em;
+      align-self: flex-start;
+      cursor: pointer;
+    }
+    h3 {
+      margin: 0;
+      padding: 0;
+      align-self: center;
+      cursor: pointer;
+    }
+  }
+}
+
