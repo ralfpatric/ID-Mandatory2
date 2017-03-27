@@ -12,6 +12,9 @@
         border-bottom: 2px solid white;
       }
       .r-i-top, .r-i-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         .ri-left {
           display: inline-block;
           .ri-l-left {
