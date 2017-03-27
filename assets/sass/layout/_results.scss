@@ -8,8 +8,10 @@
     .result-item {
       border: 2px solid white;
       margin-bottom: 2em;
-      .r-i-top, .r-i-bottom {
+      .r-i-top {
         border-bottom: 2px solid white;
+      }
+      .r-i-top, .r-i-bottom {
         .ri-left {
           display: inline-block;
           .ri-l-left {

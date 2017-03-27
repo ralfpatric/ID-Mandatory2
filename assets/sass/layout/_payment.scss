@@ -16,6 +16,36 @@
     //padding: 20%;
     border: 2px solid white;
     text-align: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 40%;
+      margin: 0 auto;
+      .form-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 1em;
+        //label {
+        //  align-self: flex-start;
+        //  font-weight: bold;
+        //}
+        //input {
+        //  align-self: flex-end;
+        //}
+      }
+      .expiry-date {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      input[type=submit] {
+        width:5em;
+        align-self: center;
+      }
+    }
   }
 }
 
