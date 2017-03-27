@@ -5,6 +5,17 @@ jQuery("document").ready(function(){
 
     console.log("Page loaded and ready.");
 
+    //If page is loaded while not at the top
+    var iSearchH = $("#search").outerHeight(true);
+    var iToTop = $(document).scrollTop();
+
+    if(iToTop >= iSearchH){
+        $("aside").css("top", 0)
+    } else {
+        var iTotal = iSearchH - iToTop;
+        $("aside").css("top", iTotal)
+    }
+
 
     // EVENTS
     $(".payment-button button").click(function(){
@@ -19,6 +30,17 @@ jQuery("document").ready(function(){
 
     $(document).scroll(function(){
         setAsideMargin();
+    });
+
+    $("#search form").submit(function (e) {
+        e.preventDefault();
+        $("#results").fadeIn(500);
+        $("aside").fadeIn(500);
+        $("footer").fadeIn(500);
+        $(".payment-button").fadeIn(500);
+        $('html, body').animate({
+            scrollTop: $("#results").offset().top
+        }, 750);
     });
 
     //FUNCTIONALITY
