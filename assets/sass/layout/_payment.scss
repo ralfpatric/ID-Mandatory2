@@ -46,6 +46,10 @@
       justify-content: center;
       width: 40%;
       margin: 0 auto;
+
+      input {
+        text-align: center;
+      }
       .form-container {
         display: flex;
         flex-direction: row;
