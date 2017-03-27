@@ -3,22 +3,27 @@
 @media screen and (max-width: 426px) {
   /* --- GENERAL --- */
 
+  footer {
+    font-size: 75%;
+  }
+
   /* --- SEARCH --- */
 
   #search {
+    font-size: 50%;
     .sectionwrapper {
       width: 90%;
       border: none;
 
       form {
-        width: 100%;
+        width: 75%;
       }
     }
   }
   /* --- RESULTS --- */
 
   #results {
-    font-size: 40% !important;
+    font-size: 50% !important;
   }
 
   #results, .payment-button, footer {
@@ -27,6 +32,15 @@
   }
 
   /* --- PAYMENT --- */
+
+  #payment .sectionwrapper {
+    width: 90% !important;
+  }
+
+  #payment i.fa {
+    top: 5%;
+    right: 5%;
+  }
 
   /* --- ASIDE --- */
 
@@ -38,6 +52,13 @@
   /* --- GENERAL --- */
 
   /* --- SEARCH --- */
+
+  #search {
+    font-size: 75%;
+    form {
+      width: 60% !important;
+    }
+  }
 
   /* --- RESULTS --- */
 
