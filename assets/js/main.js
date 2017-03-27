@@ -47,6 +47,15 @@ jQuery("document").ready(function(){
         }, 750);
     });
 
+    $(".result-item").click(function(){
+        $(".result-item").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".fa-arrow-down").click(function(){
+        console.log("Customize me! (Later)");
+    });
+
     //FUNCTIONALITY
     function setAsideMargin(){
         var iSearchHeight = $("#search").outerHeight(true);
