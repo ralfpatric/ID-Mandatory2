@@ -19,6 +19,10 @@
           display: inline-block;
           .ri-l-left {
             display: inline-block;
+            h3, p {
+              padding: 0;
+              margin: 0;
+            }
           }
           .ri-l-right {
             display: inline-block;
