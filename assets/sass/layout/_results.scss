@@ -1,13 +1,17 @@
 /* --------------- RESULTS SECTION --------------- */
 
 #results {
-
   .sectionwrapper {
     width: 90%;
     margin: 0 auto;
-    //padding: 20%;
-    border: 2px solid white;
     text-align: center;
+    .result-item {
+      border: 2px solid white;
+      margin-bottom: 2em;
+      .r-i-top {
+        border-bottom: 2px solid white;
+      }
+    }
   }
 }
 
