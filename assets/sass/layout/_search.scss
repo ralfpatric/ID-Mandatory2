@@ -26,6 +26,30 @@
   //background-color: #dce7f2;
   //border: 1px solid #2a4f73;
 
+
+  .nav-bar {
+    ul {
+      list-style: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+
+        button {
+          border: 1px solid white;
+          background-color: transparent;
+          padding: 5px;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   .sectionwrapper {
 
     width: 60%;
@@ -112,6 +136,13 @@
 
       input[type=submit] {
         //margin-top: $gutter-top;
+
+        .menu > p {
+          display: inline-block;
+        }
+
+
+
         margin: $gutter-top auto 0 auto;
       }
     }
