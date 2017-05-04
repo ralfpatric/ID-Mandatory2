@@ -25,6 +25,14 @@ jQuery("document").ready(function(){
         $("#payment").css("display", "flex");
     });
 
+    $(".seat-button button").click(function(){
+        $(".plane-wrap").css("display", "flex");
+    });
+
+    $(".close-seat").click(function(){
+        $(".plane-wrap").css("display", "none");
+    });
+
     $(document).click(function(event) {
         if($(event.target).closest('#payment').length && !$(event.target).closest('.sectionwrapper').length){
             $("#payment").css("display", "none");
@@ -70,4 +78,5 @@ jQuery("document").ready(function(){
             }
         }
     }
+
 });

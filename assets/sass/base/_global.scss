@@ -42,3 +42,8 @@ main {
   position: relative;
 }
 
+.margin-center {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
