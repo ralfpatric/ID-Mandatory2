@@ -9,9 +9,10 @@ Version: 1.0
 @import "base/variables";
 @import "base/global";
 
-@import "layout/_aside";
+@import "layout/aside";
 @import "layout/search";
 @import "layout/results";
 @import "layout/payment";
+@import "layout/modal";
 @import "layout/mobile";
 @import "layout/seat";

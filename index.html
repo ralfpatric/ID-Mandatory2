@@ -14,18 +14,6 @@
 </head>
 
 <body>
-<!--<header>
-    <nav>
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-        </ul>
-
-    </nav>
-</header>-->
-
-
 
 <div>
     <section id="search">
@@ -37,8 +25,8 @@
 
 
             <ul>
-                <li><button>Login</button></li>
-                <li><button>Register</button></li>
+                <li><button id="navbutton1" class="login">Login</button></li>
+                <li><button id="navbutton2" class="register">Register</button></li>
             </ul>
         </div>
 
@@ -66,11 +54,6 @@
         </div>
     </section>
 
-    <!--Unsure if we are allowed to use Javascript at all. If we aren't, there's no real way to make a position fixed
-     element stick within an element, as far as I know. Right now, that means that the information box on the left
-     has to be global. Or that the information won't follow up and down as you scroll. Either scenario isn't optimal,
-      both are easy to implement. If we ARE allowed to use JS, it's just a question of setting position: absolute and
-       using JS to adjust it's top property as the user scrolls, and so on.-->
     <aside>
         <!--CONTENT HERE-->
         <div class="header">
@@ -869,6 +852,55 @@
 </div>
 
 <footer>&copy; Designed and Developed by Ralf & John</footer>
+
+<div id="modal" class="modal-hidden">
+    <div id="modal-content">
+        <div id="modal-top">
+            <h2 id="modal-title">Modal Title</h2>
+        </div>
+        <div id="modal-middle">
+            <div id="modal-login-form" class="hidden">
+                <div>
+                    <input type="text" placeholder="Email" id="modal-login-email" />
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" id="modal-login-password" />
+                </div>
+            </div>
+            <div id="modal-registration-form" class="hidden">
+                <div>
+                    <input type="text" placeholder="First name" id="modal-reg-fname" />
+                    <input type="text" placeholder="Last name" id="modal-reg-lname" />
+                </div>
+                <div>
+                    <input type="text" placeholder="Mobile phone" id="modal-reg-phone" />
+                </div>
+                <div>
+                    <input type="text" placeholder="Email" id="modal-reg-email" />
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" id="modal-reg-password" />
+                </div>
+                <div>
+                    <input type="text" placeholder="Country of citizenship" id="modal-reg-country" />
+                </div>
+                <div>
+                    <input type="checkbox" id="modal-reg-newsletter" /><p>Subscribe to our newsletter to receive special offers</p>
+                </div>
+                <div>
+                    <input type="checkbox" id="modal-reg-privacy" /><p>Accept the privacy policy</p>
+                </div>
+            </div>
+            <div id="modal-profile-content" class="hidden">
+                <p>Profile content.</p>
+            </div>
+        </div>
+        <div id="modal-bottom">
+            <button id="modal-action">Action</button>
+            <button id="modal-close">Close</button>
+        </div>
+    </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
