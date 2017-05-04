@@ -1,0 +1,16 @@
+#modal {
+  width: 80vw;
+  height: 80vh;
+  position: absolute;
+  z-index: 100;
+  top: 10vh;
+  left: 10vw;
+  background-color: white; }
+
+.modal-hidden {
+  display: none; }
+
+.modal-shown {
+  display: block; }
+
+/*# sourceMappingURL=modal.css.map */
