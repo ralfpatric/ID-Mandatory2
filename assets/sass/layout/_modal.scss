@@ -49,10 +49,23 @@
 
   .reg-name-input {
 
+    display: flex;
+    flex-direction: row;
+
+      #modal-reg-fname{
+        margin-right: 5%;
+        text-align: center;
+      }
+
+      #modal-reg-lname{
+        text-align: center;
+        margin-left: -4px;
+      }
   }
 
   .reg-input {
     width: 50%;
+    margin-top: 1.5%;
 
     input {
       width: 100%;
@@ -66,6 +79,24 @@
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 
+  }
+
+  .reg-checkbox {
+    display: flex;
+    flex-direction: row;
+
+    input[type=checkbox] {
+      display: flex;
+      align-self: center;
+      width: 15%;
+      height: 0.8em;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
   }
 
 }
