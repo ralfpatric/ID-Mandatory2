@@ -4,6 +4,27 @@
 
 }
 
+.dateclass{
+  width:100%;
+}
+
+.dateclass.placeholderclass::before{
+  width:100%;
+  content:"One Way";
+
+}
+
+
+.dateclass.hey::before{
+  width:100%;
+  content:"Hey!";
+}
+
+.dateclass.placeholderclass:focus::before{
+  width:0;
+  content:"";
+}
+
 #search {
 
   height: 100vh;
@@ -96,6 +117,10 @@
         content: "f040";
       }
 
+      input[type=number]{
+        text-align: center;
+      }
+
       #date-picker {
         display: flex;
         flex-direction: row;
@@ -114,7 +139,21 @@
 
           input[type=date] {
             width: 90%;
+            //text-align: center;
           }
+
+          input[type=date]::-webkit-clear-button {
+            //display: none;
+          }
+
+          input[type=date]::-webkit-inner-spin-button {
+            display: none;
+          }
+
+          /*input[type=date]::-webkit-calendar-picker-indicator {
+            display: none;
+          }*/
+
         }
 
         #departure{

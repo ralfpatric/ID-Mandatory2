@@ -51,6 +51,7 @@ jQuery("document").ready(function(){
         $("aside").fadeIn(500);
         $("footer").fadeIn(500);
         $(".payment-button").fadeIn(500);
+        $(".seat-button").fadeIn(500);
         $('html, body').animate({
             scrollTop: $("#results").offset().top
         }, 750);
@@ -107,6 +108,40 @@ jQuery("document").ready(function(){
         var bPrivacy = $("#modal-reg-privacy").prop( "checked" );
         createAccount(sFirstName, sLastName, iPhone, sEmail, sPassword, sCountry, bSubscribe, bPrivacy);
     });
+
+
+    $("input[type=date]").change(function(){
+        console.log("remove class");
+        $(".dateclass").removeClass('placeholderclass');
+    });
+
+    /*$("input[type=date]::-webkit-clear-button").click(function(){
+        console.log("add class");
+        $(".dateclass").addClass('hey');
+    }); ----------------------------------------- Doesn't work :/ maybe we can check it out later  */
+
+
+    $("#passengers").change(function(){
+        iNrPassenger = $("#passengers").val();
+    });
+
+    $('.seat input[type=checkbox]').change(function(){
+
+        var iNrAllowedSeats = $(".seat input[type='checkbox']:checked").length;
+
+        console.log(iNrAllowedSeats);
+        console.log(iNrPassenger);
+
+        if (iNrAllowedSeats > iNrPassenger) {
+            $(this).prop('checked', false);
+            iNrAllowedSeats = iNrAllowedSeats-1;
+            //alert("allowed only 3");
+            console.log(iNrAllowedSeats);
+            console.log(iNrPassenger);
+        }
+    });
+
+
 
 
 

@@ -20,10 +20,6 @@
 
         <div class="nav-bar">
 
-
-            .
-
-
             <ul>
                 <li><button id="navbutton1" class="login">Login</button></li>
                 <li><button id="navbutton2" class="register">Register</button></li>
@@ -34,20 +30,22 @@
         <div class="sectionwrapper">
             <!--CONTENT HERE-->
             <form>
-                <label>Destination</label>
-                <input type="text" name="destination">
-                <label>Origin</label>
-                <input type="text" name="origin">
+                <label for="origin">Origin</label>
+                <input type="text" name="origin" id="origin" required autocomplete="off">
+                <label for="destination">Destination</label>
+                <input type="text" name="destination" id="destination" required autocomplete="off">
                 <div id="date-picker">
                     <div id="departure">
                         <label>Departure</label>
-                        <input type="date" name="departure">
+                        <input type="date" name="departure" required autocomplete="off">
                     </div>
                     <div id="return">
                         <label>Return</label>
-                        <input type="date" name="return"  id="datePicker">
+                        <input type="date" value="One Way" name="return"  class="test5 dateclass placeholderclass" autocomplete="off">
                     </div>
                 </div>
+                <label for="passengers">Nr. of Passengers</label>
+                <input type="number" name="passengers" id="passengers" required autocomplete="off">
                 <input class="btn" type="submit" name="submit" value="Search">
             </form>
 
