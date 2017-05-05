@@ -25,9 +25,28 @@
     font-size: 50% !important;
   }
 
-  #results, .payment-button, footer {
+  #results, .payment-button, footer, .seat-button {
     margin-left: 0 !important;
     padding-left: 0 !important;
+  }
+
+  #passengers {
+    margin-left: 0 !important;
+    .passenger-item {
+      width: 100%;
+      .passenger-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em 0;
+        margin-top: 1em;
+        div {
+          width: 100% !important;
+          display: block !important;
+        }
+      }
+    }
   }
 
   /* --- PAYMENT --- */
@@ -44,7 +63,25 @@
   /* --- ASIDE --- */
 
   aside {
-    display: none;
+    display: none !important;
+  }
+
+  .plane-wrap {
+    .plane-body {
+      width: 100% !important;
+    }
+    .close-seat {
+      top: 2% !important;
+      right: 2% !important;
+      color: black !important;
+    }
+  }
+
+  #confirmation {
+    #conf-content {
+      width: 90% !important;
+      height: 90% !important;
+    }
   }
 }
 @media screen and (max-width: 1023px) {
