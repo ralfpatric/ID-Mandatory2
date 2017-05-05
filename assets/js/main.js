@@ -138,6 +138,43 @@ jQuery("document").ready(function(){
     });
 
 
+    function showProfile(){
+        var jAccount = JSON.parse(localStorage.sjAccount);
+        $("#modal").removeClass("modal-hidden").addClass("modal-shown");
+        $("#modal-title").text("User Profile: " + jAccount.name);
+        $("#modal-action").addClass("hidden");
+        $("#modal-form").addClass("hidden");
+        var sHtml = "<p>First name: "+jAccount.fname+"</p>";
+        sHtml += "<p>Last name: "+jAccount.lname+"</p>";
+        sHtml += "<p>Email: "+jAccount.email+"</p>";
+        sHtml += "<p>Phone: "+jAccount.phone+"</p>";
+        sHtml += "<p>Country: "+jAccount.country+"</p>";
+        sHtml += "<p>Newsletter: ";
+        if(jAccount.subscribed){
+            sHtml += "Yes";
+        } else {
+            sHtml += "No";
+        }
+        sHtml += "</p>";
+        $("#modal-profile-content").empty().removeClass("hidden").append(sHtml);
+    }
+
+
+    if (localStorage.sjAccount) {
+        console.log("exists");
+        addValue();
+    }
+
+
+    function addValue(){
+        var jAccount = JSON.parse(localStorage.sjAccount);
+        console.log("Value added!");
+        $('.pass-fname-input').val(jAccount.fname);
+        $('.pass-lname-input').val(jAccount.lname);
+        $('.pass-phone-input').val(jAccount.phone);
+    }
+
+
 
 
 
@@ -271,4 +308,6 @@ jQuery("document").ready(function(){
         $("#modal-action").text("Login").addClass("modal-login-check");
         $("#modal-login-form").removeClass();
     }
+
+
 });
