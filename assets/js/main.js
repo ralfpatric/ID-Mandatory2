@@ -208,13 +208,47 @@ jQuery("document").ready(function(){
         }
     });
 
+    $("#pay-now-btn").click(function(e){
+        e.preventDefault();
+        $("#payment").css("display", "none");
+        $("#confirmation").css("display", "flex");
 
+        var sHtml = "<h2>Payment Confirmed</h2>";
+        sHtml += "<h3>Booking#: u7824578</h3>";
+        sHtml += "<h4>Travel Dates</h4>";
+        sHtml += "<p>Departure: " + departureDate;
+        sHtml += "<p>Return: " + returnDate;
+        sHtml += "<h4>Passengers</h4>";
 
+        var iPassengers = $(".passengers .bottom p").length;
+        var oPassengers = $(".passengers .bottom p");
 
+        for(var i = 0; i < iPassengers; i++){
+            sHtml += "<p>"+$(oPassengers[i]).text();+"</p>";
+        }
 
+        sHtml += "<p>A copy of this confirmation has been sent to your registered email address.</p>";
 
+        $("#conf-middle").empty().append(sHtml);
+    });
 
+    $("#conf-close").click(function(e){
+        e.preventDefault();
+        location.reload();
+    });
 
+    var departureDate = "";
+    var returnDate = "";
+
+    $('#departure input[type="date"]').change(function(){
+        departureDate = new Date(this.value);
+        departureDate = departureDate.getDate() + "/" + (departureDate.getMonth() + 1) + "/" + departureDate.getFullYear();
+    });
+
+    $('#return input[type="date"]').change(function(){
+        returnDate = new Date(this.value);
+        returnDate = returnDate.getDate() + "/" + (returnDate.getMonth() + 1) + "/" + returnDate.getFullYear();
+    });
 
 
 
