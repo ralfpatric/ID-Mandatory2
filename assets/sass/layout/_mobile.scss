@@ -7,6 +7,40 @@
     font-size: 75%;
   }
 
+  #modal {
+    #modal-content {
+      width: 90%;
+      height: 75%;
+    }
+
+    .fa {
+      right: 5% !important;
+      top: 2.5% !important;
+    }
+
+    .reg-name-input {
+      width: 100%;
+      margin-left: 10% !important;
+      transform: none;
+      width: 81% !important;
+      input {
+        margin: 0 !important;
+      }
+    }
+
+    #modal-registration-form {
+      div {
+        width: 80%;
+      }
+    }
+
+    .reg-name-input {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
   /* --- SEARCH --- */
 
   #search {
