@@ -20,11 +20,11 @@ jQuery("document").ready(function(){
 
     // EVENTS
     $(".payment-button button").click(function(){
-        $("#payment").css("display", "flex");
+        displayPayment();
     });
 
     $(".payment").click(function(){
-        $("#payment").css("display", "flex");
+        displayPayment();
     });
 
     $(".seat-button button").click(function(){
@@ -43,6 +43,7 @@ jQuery("document").ready(function(){
 
     $(document).scroll(function(){
         setAsideMargin();
+        setAsideFocus(window);
     });
 
     $("#search form").submit(function (e) {
@@ -50,6 +51,7 @@ jQuery("document").ready(function(){
         $("#results").fadeIn(500);
         $("aside").fadeIn(500);
         $("footer").fadeIn(500);
+        $("#passengers").fadeIn(500);
         $(".payment-button").fadeIn(500);
         $(".seat-button").fadeIn(500);
         $('html, body').animate({
@@ -115,14 +117,8 @@ jQuery("document").ready(function(){
         $(".dateclass").removeClass('placeholderclass');
     });
 
-    /*$("input[type=date]::-webkit-clear-button").click(function(){
-        console.log("add class");
-        $(".dateclass").addClass('hey');
-    }); ----------------------------------------- Doesn't work :/ maybe we can check it out later  */
-
-
-    $("#passengers").change(function(){
-        iNrPassenger = $("#passengers").val();
+    $("#passengers-selector").change(function(){
+        iNrPassenger = $("#passengers-selector").val();
     });
 
     $('.seat input[type=checkbox]').change(function(){
@@ -159,6 +155,35 @@ jQuery("document").ready(function(){
                 $("aside").css("top", iDetermine)
             }
         }
+    }
+
+    function setAsideFocus(oWindow){
+        var winHeight = $(oWindow).height();
+        var winScrollTop = $(oWindow).scrollTop();
+
+        $("section").each(function(index){
+            var elemHeight = $(this).height();
+            var elementTop = $(this).position().top;
+
+            if (elementTop < winScrollTop + winHeight && winScrollTop < elementTop + elemHeight) {
+                if ($(this).attr("id") == "results") {
+                    $("aside *").removeClass("current");
+                    $("aside div.destinations").addClass("current");
+                } else if($(this).attr("id") == "passengers"){
+                    $("aside *").removeClass("current");
+                    $("aside div.passengers").addClass("current");
+                }
+            } else {
+                $(this).removeClass("current");
+            }
+        });
+    }
+
+    function displayPayment() {
+        $("#payment").css("display", "flex");
+
+        $("aside *").removeClass("current");
+        $("aside div.payment").addClass("current");
     }
 
     function createAccount(sFirstName, sLastName, iPhone, sEmail, sPassword, sCountry, bSubscribe, bPrivacy){

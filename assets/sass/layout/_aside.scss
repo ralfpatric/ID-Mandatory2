@@ -23,7 +23,7 @@ aside {
     }
   }
   .destinations {
-    margin-top: 2em;
+    padding-top: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +45,7 @@ aside {
     }
   }
   .passengers {
-    margin-top: 2em;
+    padding-top: 2em;
     padding-bottom: 2em;
     border-bottom: 2px solid white;
     display: flex;
@@ -62,7 +62,7 @@ aside {
     }
   }
   .payment {
-    margin-top: 2em;
+    padding-top: 2em;
     padding-bottom: 2em;
     border-bottom: 2px solid white;
     display: flex;
@@ -80,6 +80,9 @@ aside {
       align-self: center;
       cursor: pointer;
     }
+  }
+  .current {
+    background-color: darken($secondaryColor, 10);
   }
 }
 
