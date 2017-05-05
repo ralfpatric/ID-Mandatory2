@@ -32,21 +32,21 @@
             <!--CONTENT HERE-->
             <form>
                 <label for="origin">Origin</label>
-                <input type="text" name="origin" id="origin"  autocomplete="off">
+                <input type="text" name="origin" id="origin" required autocomplete="off">
                 <label for="destination">Destination</label>
-                <input type="text" name="destination" id="destination"  autocomplete="off">
+                <input type="text" name="destination" id="destination" required  autocomplete="off">
                 <div id="date-picker">
                     <div id="departure">
                         <label>Departure</label>
-                        <input type="date" name="departure"  autocomplete="off">
+                        <input type="date" name="departure" required autocomplete="off">
                     </div>
                     <div id="return">
                         <label>Return</label>
-                        <input type="date" name="return"  class="test5 dateclass placeholderclass" autocomplete="off">
+                        <input type="date" name="return" required class="test5 dateclass placeholderclass" autocomplete="off">
                     </div>
                 </div>
                 <label for="passengers">Nr. of Passengers</label>
-                <input type="number" name="passengers" id="passengers-selector"  autocomplete="off">
+                <input type="number" name="passengers" id="passengers-selector" required autocomplete="off">
                 <input class="btn" type="submit" name="submit" value="Search">
             </form>
 
