@@ -158,6 +158,7 @@ jQuery("document").ready(function(){
 
     $("#passengers-selector").change(function(){
         iNrPassenger = $("#passengers-selector").val();
+        generatePassTemplate();
     });
 
     $('.seat input[type=checkbox]').change(function(){
@@ -177,41 +178,19 @@ jQuery("document").ready(function(){
     });
 
 
-    function showProfile(){
-        var jAccount = JSON.parse(localStorage.sjAccount);
-        $("#modal").removeClass("modal-hidden").addClass("modal-shown");
-        $("#modal-title").text("User Profile: " + jAccount.name);
-        $("#modal-action").addClass("hidden");
-        $("#modal-form").addClass("hidden");
-        var sHtml = "<p>First name: "+jAccount.fname+"</p>";
-        sHtml += "<p>Last name: "+jAccount.lname+"</p>";
-        sHtml += "<p>Email: "+jAccount.email+"</p>";
-        sHtml += "<p>Phone: "+jAccount.phone+"</p>";
-        sHtml += "<p>Country: "+jAccount.country+"</p>";
-        sHtml += "<p>Newsletter: ";
-        if(jAccount.subscribed){
-            sHtml += "Yes";
-        } else {
-            sHtml += "No";
-        }
-        sHtml += "</p>";
-        $("#modal-profile-content").empty().removeClass("hidden").append(sHtml);
-    }
 
 
-    if (localStorage.sjAccount) {
-        console.log("exists");
-        addValue();
-    }
 
 
-    function addValue(){
-        var jAccount = JSON.parse(localStorage.sjAccount);
-        console.log("Value added!");
-        $('.pass-fname-input').val(jAccount.fname);
-        $('.pass-lname-input').val(jAccount.lname);
-        $('.pass-phone-input').val(jAccount.phone);
-    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -294,6 +273,7 @@ jQuery("document").ready(function(){
                 $("#modal").addClass("modal-hidden").removeClass("modal-shown");
                 handleLogin();
                 bLoggedIn = true;
+                addValue();
             } else {
                 console.log("Login credentials incorrect.");
             }
@@ -312,6 +292,7 @@ jQuery("document").ready(function(){
         bLoggedIn = false;
         $(".log-out").text("Login").addClass("login").removeClass("log-out");
         $(".user-profile").text("Register").addClass("register").removeClass("user-profile");
+        RemoveValue();
     }
 
     function showProfile(){
@@ -348,6 +329,50 @@ jQuery("document").ready(function(){
         $("#modal-action").text("Login").addClass("modal-login-check");
         $("#modal-login-form").removeClass();
     }
+
+    function addValue(){
+        var jAccount = JSON.parse(localStorage.sjAccount);
+        console.log("Value added!");
+        $('#pass-fname-input1').val(jAccount.fname);
+        $('#pass-lname-input1').val(jAccount.lname);
+        $('#pass-phone-input1').val(jAccount.phone);
+    }
+
+    function RemoveValue(){
+        console.log("Value removed!");
+        $('#pass-fname-input1').val("");
+        $('#pass-lname-input1').val("");
+        $('#pass-phone-input1').val("");
+    }
+
+    function generatePassTemplate(){
+        for (var i = 0; i<iNrPassenger-1; i++) {
+            $("#new-cont").append(sPassGeneration);
+        }
+    }
+
+    //TEMPLATES
+
+    var sPassGeneration =` <div class="passenger-item">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+
+                            <div class="passenger-details">
+                                <div class="pass-fname">
+                                    <label>Name</label>
+                                    <input type="text" name="origin" class="pass-fname-input" value="" autocomplete="off">
+                                </div>
+
+                                <div class="pass-lname">
+                                    <label>Last Name</label>
+                                    <input type="text" name="destination" class="pass-lname-input" value="" autocomplete="off">
+                                </div>
+
+                                <div class="pass-phone">
+                                    <label >Phone Number</label>
+                                    <input type="text" name="destination" class="pass-phone-input" value="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>`;
 
 
 });
