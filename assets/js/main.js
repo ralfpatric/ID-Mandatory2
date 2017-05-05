@@ -96,7 +96,20 @@ jQuery("document").ready(function(){
         targetPrice = $(targetPrice).find(".ri-right h3");
         var sPrice = $(targetPrice[0]).text();
         sPrice = sPrice.split(" ");
-        console.log(sPrice[0]);
+        iPrice = Number(sPrice[0]);
+
+        if($(oTarget).hasClass("r-i-top-details-1")){
+            iPrice = iPrice * 0.8;
+        } else if($(oTarget).hasClass("r-i-top-details-2")){
+            iPrice = iPrice * 1.2;
+        } else if($(oTarget).hasClass("r-i-top-details-3")){
+            iPrice = iPrice * 1.5;
+        }
+
+        iPrice = Math.round(iPrice);
+
+        var sNewPrice = "" + iPrice + " DKK";
+        $(targetPrice[0]).text(sNewPrice);
     });
 
     $(".r-i-bottom-details-1, .r-i-bottom-details-2, .r-i-bottom-details-3").click(function(e){
@@ -105,6 +118,24 @@ jQuery("document").ready(function(){
         setTimeout(function(){
             $(oTarget).addClass("active-details");
         }, 50);
+        var targetPrice = $(oTarget).parent().parent();
+        targetPrice = $(targetPrice).find(".ri-right h3");
+        var sPrice = $(targetPrice[1]).text();
+        sPrice = sPrice.split(" ");
+        iPrice = Number(sPrice[0]);
+
+        if($(oTarget).hasClass("r-i-bottom-details-1")){
+            iPrice = iPrice * 0.8;
+        } else if($(oTarget).hasClass("r-i-bottom-details-2")){
+            iPrice = iPrice * 1.2;
+        } else if($(oTarget).hasClass("r-i-bottom-details-3")){
+            iPrice = iPrice * 1.5;
+        }
+
+        iPrice = Math.round(iPrice);
+
+        var sNewPrice = "" + iPrice + " DKK";
+        $(targetPrice[1]).text(sNewPrice);
     });
 
     $(document).on("click", ".log-out", function(){
@@ -351,9 +382,55 @@ jQuery("document").ready(function(){
         }
     }
 
-    //TEMPLATES
+    setInterval(function(){
+        $("div.destinations .top h3").empty();
+        if($("#results>.sectionwrapper>.active").length > 0){
+            var sTop1 = $("div.result-item.active .r-i-top .ri-l-left h3").text() + " - ";
+            var sTop2 = $("div.result-item.active .r-i-top .ri-m-left h3").text();
+            var sText1 = "" + sTop1 + sTop2;
+            $("div.destinations .top h3").text(sText1);
 
-    var sPassGeneration =` <div class="passenger-item">
+            var sTop3 = $("div.result-item.active .r-i-bottom .ri-l-left h3").text() + " - ";
+            var sTop4 = $("div.result-item.active .r-i-bottom .ri-m-left h3").text();
+            var sText2 = "" + sTop3 + sTop4;
+            $("div.destinations .bottom h3").text(sText2);
+
+            var targetPrice = $("div.result-item.active").find(".ri-right h3");
+            var sPrice1 = $(targetPrice[0]).text();
+            var sPrice2 = $(targetPrice[1]).text();
+            sPrice1 = sPrice1.split(" ");
+            iPrice1 = Number(sPrice1[0]);
+            sPrice2 = sPrice2.split(" ");
+            iPrice2 = Number(sPrice2[0]);
+            var iFinalPrice = iPrice1 + iPrice2;
+
+            var sPriceText = "" + iFinalPrice + " DKK";
+            $("h2.total-price .price").text(sPriceText);
+        }
+
+        if($(".passenger-item").length > 0){
+            var iLength = $(".passenger-item").length;
+            var oItem = $(".passenger-item");
+            var sHtml = "";
+            for(var i = 0; i < iLength; i++){
+                if($(oItem[i])){
+
+                }
+                var fname = $(oItem[i]).find(".pass-fname").find("input").val();
+                var lname = $(oItem[i]).find(".pass-lname").find("input").val();
+                sHtml += "<p>"+fname+" "+lname+"</p>";
+            }
+
+            $("div.passengers div.bottom").empty().append(sHtml);
+        }
+    }, 500);
+});
+
+
+
+//TEMPLATES
+
+var sPassGeneration = `<div class="passenger-item">
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
 
                             <div class="passenger-details">
@@ -373,6 +450,3 @@ jQuery("document").ready(function(){
                                 </div>
                             </div>
                         </div>`;
-
-
-});
