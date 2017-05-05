@@ -189,6 +189,7 @@ jQuery("document").ready(function(){
 
     $("#passengers-selector").change(function(){
         iNrPassenger = $("#passengers-selector").val();
+        generatePassTemplate();
     });
 
     $('.seat input[type=checkbox]').change(function(){
@@ -206,6 +207,21 @@ jQuery("document").ready(function(){
             console.log(iNrPassenger);
         }
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -288,6 +304,7 @@ jQuery("document").ready(function(){
                 $("#modal").addClass("modal-hidden").removeClass("modal-shown");
                 handleLogin();
                 bLoggedIn = true;
+                addValue();
             } else {
                 console.log("Login credentials incorrect.");
             }
@@ -306,6 +323,7 @@ jQuery("document").ready(function(){
         bLoggedIn = false;
         $(".log-out").text("Login").addClass("login").removeClass("log-out");
         $(".user-profile").text("Register").addClass("register").removeClass("user-profile");
+        RemoveValue();
     }
 
     function showProfile(){
@@ -343,6 +361,27 @@ jQuery("document").ready(function(){
         $("#modal-login-form").removeClass();
     }
 
+    function addValue(){
+        var jAccount = JSON.parse(localStorage.sjAccount);
+        console.log("Value added!");
+        $('#pass-fname-input1').val(jAccount.fname);
+        $('#pass-lname-input1').val(jAccount.lname);
+        $('#pass-phone-input1').val(jAccount.phone);
+    }
+
+    function RemoveValue(){
+        console.log("Value removed!");
+        $('#pass-fname-input1').val("");
+        $('#pass-lname-input1').val("");
+        $('#pass-phone-input1').val("");
+    }
+
+    function generatePassTemplate(){
+        for (var i = 0; i<iNrPassenger-1; i++) {
+            $("#new-cont").append(sPassGeneration);
+        }
+    }
+
     setInterval(function(){
         $("div.destinations .top h3").empty();
         if($("#results>.sectionwrapper>.active").length > 0){
@@ -368,5 +407,46 @@ jQuery("document").ready(function(){
             var sPriceText = "" + iFinalPrice + " DKK";
             $("h2.total-price .price").text(sPriceText);
         }
+
+        if($(".passenger-item").length > 0){
+            var iLength = $(".passenger-item").length;
+            var oItem = $(".passenger-item");
+            var sHtml = "";
+            for(var i = 0; i < iLength; i++){
+                if($(oItem[i])){
+
+                }
+                var fname = $(oItem[i]).find(".pass-fname").find("input").val();
+                var lname = $(oItem[i]).find(".pass-lname").find("input").val();
+                sHtml += "<p>"+fname+" "+lname+"</p>";
+            }
+
+            $("div.passengers div.bottom").empty().append(sHtml);
+        }
     }, 500);
 });
+
+
+
+//TEMPLATES
+
+var sPassGeneration = `<div class="passenger-item">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+
+                            <div class="passenger-details">
+                                <div class="pass-fname">
+                                    <label>Name</label>
+                                    <input type="text" name="origin" class="pass-fname-input" value="" autocomplete="off">
+                                </div>
+
+                                <div class="pass-lname">
+                                    <label>Last Name</label>
+                                    <input type="text" name="destination" class="pass-lname-input" value="" autocomplete="off">
+                                </div>
+
+                                <div class="pass-phone">
+                                    <label >Phone Number</label>
+                                    <input type="text" name="destination" class="pass-phone-input" value="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>`;
