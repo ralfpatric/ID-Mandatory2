@@ -60,12 +60,51 @@ jQuery("document").ready(function(){
     });
 
     $(".result-item").click(function(){
-        $(".result-item").removeClass("active");
-        $(this).addClass("active");
+        if(!$(this).hasClass("active")){
+            $(".result-item").removeClass("active");
+            $(".result-item *").removeClass("details-active");
+            $(this).addClass("active");
+            $('html, body').animate({
+                scrollTop: $(this).offset().top
+            }, 750);
+        }
+    });
+
+    $(".destinations").click(function(){
+        $('html, body').animate({
+            scrollTop: $("#results").offset().top
+        }, 750);
+    });
+
+    $(".passengers").click(function(){
+        $('html, body').animate({
+            scrollTop: $("#passengers").offset().top
+        }, 750);
     });
 
     $(".fa-arrow-down").click(function(){
-        console.log("Customize me! (Later)");
+        $(this).parent().parent().parent().next().toggleClass("details-active");
+    });
+
+    $(".r-i-top-details-1, .r-i-top-details-2, .r-i-top-details-3").click(function(e){
+        var oTarget = e.currentTarget;
+        $(".r-i-top-details *").removeClass("active-details");
+        setTimeout(function(){
+            $(oTarget).addClass("active-details");
+        }, 50);
+        var targetPrice = $(oTarget).parent().parent();
+        targetPrice = $(targetPrice).find(".ri-right h3");
+        var sPrice = $(targetPrice[0]).text();
+        sPrice = sPrice.split(" ");
+        console.log(sPrice[0]);
+    });
+
+    $(".r-i-bottom-details-1, .r-i-bottom-details-2, .r-i-bottom-details-3").click(function(e){
+        var oTarget = e.currentTarget;
+        $(".r-i-bottom-details *").removeClass("active-details");
+        setTimeout(function(){
+            $(oTarget).addClass("active-details");
+        }, 50);
     });
 
     $(document).on("click", ".log-out", function(){
@@ -254,6 +293,7 @@ jQuery("document").ready(function(){
                 $("#modal-login-form").addClass("hidden");
                 $("#modal").addClass("modal-hidden").removeClass("modal-shown");
                 handleLogin();
+                bLoggedIn = true;
             } else {
                 console.log("Login credentials incorrect.");
             }
