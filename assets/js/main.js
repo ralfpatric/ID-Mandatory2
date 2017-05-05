@@ -293,8 +293,6 @@ jQuery("document").ready(function(){
                     $("aside *").removeClass("current");
                     $("aside div.passengers").addClass("current");
                 }
-            } else {
-                $(this).removeClass("current");
             }
         });
     }
