@@ -9,6 +9,7 @@ aside {
   top:100%;
   left:0;
   border-right: 2px solid white;
+  color: $primaryColor;
   .header {
     padding-top: 1em;
     border-bottom: 2px solid white;
@@ -20,6 +21,7 @@ aside {
       margin: 0;
       margin-bottom: 0.5em;
       padding: 0;
+      color: white;
     }
   }
   .destinations {

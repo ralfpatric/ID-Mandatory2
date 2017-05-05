@@ -10,8 +10,8 @@ $headlineFont : 'Roboto', sans-serif;
 /* ----- COLORS ----- */
 
 /* -- NOTE: These colors are not set in stone, just something random I had saved -- */
-$primaryColor : #666666;
-$secondaryColor : #427AA1;
+$primaryColor : #F1F1F1;
+$secondaryColor : #048872;
 $tertiaryColor : #048872;
 
 /* ----- GUTTERS ----- */
@@ -23,7 +23,7 @@ $input-height: 3vh;
 
 
 body {
-  background-color: #EDEDED;
+  background-color: $primaryColor;
 }
 
 /* ----- Media Query Variables ----- */

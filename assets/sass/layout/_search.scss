@@ -1,29 +1,9 @@
 /* --------------- SEARCH SECTION --------------- */
 
-#search-wrap {
-
-}
-
 .dateclass{
   width:100%;
 }
 
-.dateclass.placeholderclass::before{
-  width:100%;
-  content:"One Way";
-
-}
-
-
-.dateclass.hey::before{
-  width:100%;
-  content:"Hey!";
-}
-
-.dateclass.placeholderclass:focus::before{
-  width:0;
-  content:"";
-}
 
 #search {
 
@@ -61,8 +41,9 @@
         cursor: pointer;
 
         button {
-          border: 1px solid white;
-          background-color: transparent;
+          border: 1px solid $tertiaryColor;
+          background-color: $tertiaryColor;
+          color: white;
           padding: 5px;
 
           cursor: pointer;
