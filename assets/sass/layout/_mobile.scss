@@ -50,6 +50,24 @@
 @media screen and (max-width: 1023px) {
   /* --- GENERAL --- */
 
+  #modal {
+    #modal-content {
+      width: 75%;
+    }
+
+    .fa {
+      right: 5% !important;
+    }
+
+    .reg-name-input {
+      width: 100%;
+      margin-left: 8%;
+      transform: none;
+    }
+  }
+
+
+
   /* --- SEARCH --- */
 
   #search {
@@ -65,7 +83,37 @@
     font-size: 75%;
   }
 
+  /* --- PASSENGERS --- */
+  #passengers {
+
+    .passenger-details {
+      div{
+        width: 25% !important;
+        margin: 0 auto;
+        input{
+          width: 100%;
+        }
+      }
+    }
+  }
+
   /* --- PAYMENT --- */
+
+  #payment {
+    .sectionwrapper {
+      width: 75%;
+    }
+
+    .fa {
+      right: 5%;
+    }
+  }
+
+  #confirmation {
+    #conf-content {
+      width: 75%;
+    }
+  }
 
   /* --- ASIDE --- */
 
