@@ -1,0 +1,19 @@
+Hello Roxana & Rune,
+
+This document was created to quickly guide you through the prototype.
+
+Step 1: Register an account by clicking on the Register button on the top right corner of the page. This step is crucial because the way we build the page, the login details are taken from localstorage and when you create an account, data is added to the localstorage.
+
+Step 2: We have only implemented a trip from Budapest to Bucharest so in the Origin field please type in Budapest and for Destination, Bucharest. The Dates do not matter. Number of passengers has to be 1 or above.
+
+Step 3: Click on Search.
+
+Step 4: Feel free to select whichever flight you want and choose the desired class. 
+
+Step 5: Input your Passenger details. Please note that if you only selected one passenger the data will be extracted automatically from your user profile and if more than 1 passengers were selected you will have to fill out their flight information. 
+
+Step 6: Choose your seats for both flights. It doesn’t matter which seats you pick.
+
+Step 7: Proceed to payment by clicking either on the Payment section in the sidebar or by clicking on the Pay Now button. 
+
+Step 8: Fill out your payment details. There is no check on this and it’s not stored anywhere (for obvious reasons) and click on pay now. A confirmation window will appear to inform you about the purchased ticket.
