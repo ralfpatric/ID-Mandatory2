@@ -31,13 +31,13 @@
             <!--CONTENT HERE-->
             <form>
                 <label for="origin">Origin</label>
-                <input type="text" name="origin" id="origin" required autocomplete="off">
+                <input type="text" name="origin" id="origin"  autocomplete="off">
                 <label for="destination">Destination</label>
-                <input type="text" name="destination" id="destination" required autocomplete="off">
+                <input type="text" name="destination" id="destination"  autocomplete="off">
                 <div id="date-picker">
                     <div id="departure">
                         <label>Departure</label>
-                        <input type="date" name="departure" required autocomplete="off">
+                        <input type="date" name="departure"  autocomplete="off">
                     </div>
                     <div id="return">
                         <label>Return</label>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <label for="passengers">Nr. of Passengers</label>
-                <input type="number" name="passengers" id="passengers" required autocomplete="off">
+                <input type="number" name="passengers" id="passengers"  autocomplete="off">
                 <input class="btn" type="submit" name="submit" value="Search">
             </form>
 
@@ -852,6 +852,7 @@
 <footer>&copy; Designed and Developed by Ralf & John</footer>
 
 <div id="modal" class="modal-hidden">
+    <i class="fa fa-times fa-3x" id="modal-close" aria-hidden="true"></i>
     <div id="modal-content">
         <div id="modal-top">
             <h2 id="modal-title">Modal Title</h2>
@@ -866,26 +867,26 @@
                 </div>
             </div>
             <div id="modal-registration-form" class="hidden">
-                <div>
+                <div class="margin-center reg-name-input">
                     <input type="text" placeholder="First name" id="modal-reg-fname" />
                     <input type="text" placeholder="Last name" id="modal-reg-lname" />
                 </div>
-                <div>
+                <div class="margin-center reg-input">
                     <input type="text" placeholder="Mobile phone" id="modal-reg-phone" />
                 </div>
-                <div>
+                <div class="margin-center reg-input">
                     <input type="text" placeholder="Email" id="modal-reg-email" />
                 </div>
-                <div>
+                <div class="margin-center reg-input">
                     <input type="password" placeholder="Password" id="modal-reg-password" />
                 </div>
-                <div>
+                <div class="margin-center reg-input">
                     <input type="text" placeholder="Country of citizenship" id="modal-reg-country" />
                 </div>
-                <div>
+                <div class="margin-center reg-input">
                     <input type="checkbox" id="modal-reg-newsletter" /><p>Subscribe to our newsletter to receive special offers</p>
                 </div>
-                <div>
+                <div class="margin-center reg-input">
                     <input type="checkbox" id="modal-reg-privacy" /><p>Accept the privacy policy</p>
                 </div>
             </div>
@@ -894,8 +895,7 @@
             </div>
         </div>
         <div id="modal-bottom">
-            <button id="modal-action">Action</button>
-            <button id="modal-close">Close</button>
+            <button id="modal-action" class="btn">Action</button>
         </div>
     </div>
 </div>

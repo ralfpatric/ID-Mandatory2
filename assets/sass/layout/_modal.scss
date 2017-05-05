@@ -30,6 +30,44 @@
     background-color: #EDEDED;
   }
 
+  #modal-close {
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    cursor: pointer;
+    color: white;
+  }
+
+  #modal-login-form {
+    input {
+      width: 50%;
+      text-align: center;
+      margin-top: 2.5%;
+      margin-bottom: 2.5%;
+    }
+  }
+
+  .reg-name-input {
+
+  }
+
+  .reg-input {
+    width: 50%;
+
+    input {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  #modal-action {
+    //width: 50%;
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
+  }
+
 }
 
 .modal-hidden {
